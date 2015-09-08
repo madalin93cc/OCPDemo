@@ -16,6 +16,24 @@ public class Exceptions {
 //        }
 //        testTryWithResources();
         testSuppressedExceptions();
+//        testCatchMoreExc();
+    }
+    private static void throwsIoExc() throws IOException{
+
+    }
+    private static void throwsSQLExc() throws SQLException{
+
+    }
+
+    private static void testCatchMoreExc(){
+        try {
+            throwsIoExc();
+            throwsSQLExc();
+        } catch (IOException e){
+
+        } catch (Exception e){
+
+        }
     }
 
     private static void testSuppressedExceptions(){
