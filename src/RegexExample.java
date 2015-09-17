@@ -1,3 +1,4 @@
+import java.util.Locale;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -37,6 +38,7 @@ public class RegexExample {
         execRegex(".*?xx", "yyxxxyxx"); // non greedy
         execRegex("a?", "aba"); // zero length
         execRegex("a?", "baba");
+        execRegex("\\B", "^23 *$76 bc");
     }
 
     private static void execRegex(String r, String s){
