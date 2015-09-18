@@ -13,6 +13,25 @@ public class InnerClasses {
 
         Outer2 outer2 = new Outer2();
         outer2.doStuff();
+
+        new InnerClasses().go();
+    }
+
+    void go (){
+        new A().m();
+
+        class A{
+            void m() {
+                System.out.println("Inner");
+            }
+        }
+        new A().m();
+    }
+
+    class A{
+        void m(){
+            System.out.println("Middle");
+        }
     }
 
 }
